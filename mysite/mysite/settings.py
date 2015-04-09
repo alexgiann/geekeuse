@@ -102,6 +102,10 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+# From https://devcenter.heroku.com/articles/django-assets
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 
